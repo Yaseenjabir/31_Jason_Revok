@@ -32,9 +32,6 @@ export default function AddPostToCategory() {
     try {
       setLoader(true);
       const firestore = getFirestore(app);
-      alert(categoryId);
-      return;
-
       const docRef1 = doc(firestore, "categories", categoryId);
 
       await updateDoc(docRef1, {
@@ -93,7 +90,14 @@ export default function AddPostToCategory() {
           <select
             className="w-full py-2 px-3 rounded-full"
             onChange={(e) => {
-              setCategory(e.target.value);
+              const selectedCategory = e.target.value;
+              setCategory(selectedCategory);
+              const selectedItem = data.find(
+                (item) => item.name === selectedCategory
+              );
+              if (selectedItem) {
+                setCategoryId(selectedItem.id);
+              }
             }}
           >
             <option selected disabled>
@@ -101,7 +105,7 @@ export default function AddPostToCategory() {
             </option>
             {data &&
               data.map((item) => (
-                <option onClick={() => setCategoryId(item.id)}>
+                <option key={item.id} value={item.name}>
                   {item.name}
                 </option>
               ))}

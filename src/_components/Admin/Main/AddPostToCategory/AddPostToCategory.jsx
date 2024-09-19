@@ -29,7 +29,8 @@ export default function AddPostToCategory() {
       alert("Fields are missing");
       return;
     }
-    alert(`Title:${titleRef}`);
+    alert(`Title:${titleRef.current?.value}`);
+    alert(`Category:${category}`);
     return;
     try {
       setLoader(true);

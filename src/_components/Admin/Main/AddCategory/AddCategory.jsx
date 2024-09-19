@@ -16,37 +16,34 @@ export default function AddCategory() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (
-      !categoryNameRef.current?.value ||
-      !descriptionRef.current?.value ||
-      !file
-    ) {
+    if (!file || !category || !titleRef.current?.value) {
       alert("Fields are missing");
       return;
     }
 
+    const title = titleRef.current.value; // Ensure title is set properly
+
     try {
       setLoader(true);
+      const firestore = getFirestore(app);
+      const docRef1 = doc(firestore, "categories", categoryId);
+      await updateDoc(docRef1, { postLength: increment(1) });
+
       const storage = getStorage(app);
-      const imgRef = ref(
-        storage,
-        `categories/${categoryNameRef.current?.value}`
-      );
+      const imgRef = ref(storage, `${category}Posts/${title}`);
       await uploadBytes(imgRef, file);
       const imageURL = await getDownloadURL(imgRef);
 
-      const firestore = getFirestore(app);
-      const docRef = await addDoc(collection(firestore, "categories"), {
-        name: categoryNameRef.current?.value,
-        description: descriptionRef.current?.value,
+      await addDoc(collection(firestore, `${category}`), {
+        title: title,
         image: imageURL,
-        postLength: 0,
-      }).then(() => {
-        alert("Category Created");
-        location.reload();
       });
+
+      alert(`Post added to ${category}`);
+      location.reload();
     } catch (error) {
-      alert(error);
+      console.error(error); // Log for debugging
+      alert(error.message || "An error occurred");
     } finally {
       setLoader(false);
     }

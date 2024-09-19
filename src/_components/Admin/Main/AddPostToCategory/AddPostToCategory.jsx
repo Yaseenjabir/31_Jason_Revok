@@ -33,10 +33,11 @@ export default function AddPostToCategory() {
       setLoader(true);
       const firestore = getFirestore(app);
 
-      alert("Docs updated");
-      return;
-
       const docRef1 = doc(firestore, "categories", categoryId);
+
+      alert(docRef1);
+
+      return;
       await updateDoc(docRef1, {
         postLength: increment(1),
       });

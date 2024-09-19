@@ -25,34 +25,38 @@ export default function AddPostToCategory() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!file || !category || !titleRef.current?.value) {
+    alert("OK");
+    return;
+    if (!file || !category || !titleRef) {
       alert("Fields are missing");
       return;
     }
-
-    const title = titleRef.current.value; // Ensure title is set properly
-
     try {
       setLoader(true);
       const firestore = getFirestore(app);
+
       const docRef1 = doc(firestore, "categories", categoryId);
-      await updateDoc(docRef1, { postLength: increment(1) });
+      await updateDoc(docRef1, {
+        postLength: increment(1),
+      });
 
       const storage = getStorage(app);
-      const imgRef = ref(storage, `${category}Posts/${title}`);
+      const imgRef = ref(
+        storage,
+        `${category}Posts/${titleRef.current?.value}`
+      );
       await uploadBytes(imgRef, file);
       const imageURL = await getDownloadURL(imgRef);
 
-      await addDoc(collection(firestore, `${category}`), {
-        title: title,
+      const docRef2 = await addDoc(collection(firestore, `${category}`), {
+        title: titleRef.current?.value,
         image: imageURL,
+      }).then(() => {
+        alert(`Post added to ${category}`);
+        location.reload();
       });
-
-      alert(`Post added to ${category}`);
-      location.reload();
     } catch (error) {
-      console.error(error); // Log for debugging
-      alert(error.message || "An error occurred");
+      alert(error);
     } finally {
       setLoader(false);
     }

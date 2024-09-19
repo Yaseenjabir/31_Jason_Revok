@@ -29,9 +29,6 @@ export default function AddPostToCategory() {
       alert("Fields are missing");
       return;
     }
-    alert(`Title:${titleRef.current?.value}`);
-    alert(`Category:${category}`);
-    return;
     try {
       setLoader(true);
       const firestore = getFirestore(app);
@@ -40,6 +37,9 @@ export default function AddPostToCategory() {
       await updateDoc(docRef1, {
         postLength: increment(1),
       });
+
+      alert("Docs updated");
+      return;
 
       const storage = getStorage(app);
       const imgRef = ref(

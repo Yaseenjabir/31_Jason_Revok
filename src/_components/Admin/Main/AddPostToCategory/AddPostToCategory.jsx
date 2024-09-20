@@ -83,43 +83,60 @@ export default function AddPostToCategory() {
         <h1 className="text-xl font-medium mb-5">Add post to categpory</h1>
         <form
           onSubmit={handleSubmit}
-          className="bg-gray-50 py-5 max-w-[500px] w-full px-5 rounded-lg gap-2 flex items-start justify-center flex-col"
+          className="bg-gray-50 py-5 max-w-[500px] w-full px-5 rounded-lg gap-5 flex items-start justify-center flex-col"
         >
-          <select
-            className="w-full py-2 px-3 rounded-full"
-            onChange={(e) => {
-              const selectedCategory = e.target.value;
-              setCategory(selectedCategory);
-              const selectedItem = data.find(
-                (item) => item.name === selectedCategory
-              );
-              if (selectedItem) {
-                setCategoryId(selectedItem.id);
-              }
-            }}
-          >
-            <option selected disabled>
-              Select Category below
-            </option>
-            {data &&
-              data.map((item) => (
-                <option key={item.id} value={item.name}>
-                  {item.name}
-                </option>
-              ))}
-          </select>
+          <div>
+            <label htmlFor="selectCategory" className="font-medium px-2">
+              Select Category (Mandatory)
+            </label>
+            <select
+              id="selectCategory"
+              className="w-full py-2 px-3 rounded-full"
+              onChange={(e) => {
+                const selectedCategory = e.target.value;
+                setCategory(selectedCategory);
+                const selectedItem = data.find(
+                  (item) => item.name === selectedCategory
+                );
+                if (selectedItem) {
+                  setCategoryId(selectedItem.id);
+                }
+              }}
+            >
+              <option selected disabled>
+                Select Category below
+              </option>
+              {data &&
+                data.map((item) => (
+                  <option key={item.id} value={item.name}>
+                    {item.name}
+                  </option>
+                ))}
+            </select>
+          </div>
 
-          <input
-            ref={titleRef}
-            type="text"
-            placeholder="Enter Post Title"
-            className="border outline-none py-2 bg-white px-2 rounded-full w-full"
-          />
-          <input
-            className="border bg-white outline-none py-2 px-2 rounded-full w-full"
-            type="file"
-            onChange={(e) => setFile(e.target.files[0])}
-          />
+          <div>
+            <label htmlFor="selectCategory" className="font-medium px-2">
+              Enter Post Title (Optional)
+            </label>
+            <input
+              ref={titleRef}
+              type="text"
+              placeholder="Enter Post Title"
+              className="border outline-none py-2 bg-white px-2 rounded-full w-full"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="selectCategory" className="font-medium px-2">
+              Choose Image (Mandatory)
+            </label>
+            <input
+              className="border bg-white outline-none py-2 px-2 rounded-full w-full"
+              type="file"
+              onChange={(e) => setFile(e.target.files[0])}
+            />
+          </div>
           {loader ? (
             <button
               type="submit"

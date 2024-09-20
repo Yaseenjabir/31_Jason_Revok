@@ -15,7 +15,12 @@ export default function Footer() {
         }  z-10 relative pt-[150px] py-12 mx-auto`}
       >
         <div className="w-full flex flex-col px-12 sm:px6 gap-7 md:hidden">
-          <FaInstagram className="text-[30px]" />
+          <a
+            className="w-min"
+            href="https://www.instagram.com/sehrishhart?igsh=MWpyOHAzYTQ3c20zOQ=="
+          >
+            <FaInstagram className="text-[30px] cursor-pointer" />
+          </a>
           <div>
             <h1
               className="tracking-[3px] font-semibold "
@@ -23,34 +28,28 @@ export default function Footer() {
             >
               Contact
             </h1>
+            <p>سحرش حسین</p>
             <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              Library Street Collective
-            </p>
-            <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              {" "}
-              1260 Library St, Detroit, MI 48226
-            </p>
-            <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              {" "}
-              T 313 600-7443
-            </p>
-            <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              {" "}
-              E info@lscgallery.com
+              sehrishhussainstudio@gmail.com
             </p>
           </div>
           <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-            © 2022 REVOK. All rights reserved.
+            © 2022 Sehrish. All rights reserved.
           </p>
         </div>
         <div className="hidden md:flex md:items-start md:justify-center md:gap-7 lg:gap-16 xl:gap-32">
           <div>
-            <FaInstagram className="text-[30px]" />
+            <a
+              className="w-min"
+              href="https://www.instagram.com/sehrishhart?igsh=MWpyOHAzYTQ3c20zOQ=="
+            >
+              <FaInstagram className="text-[30px] cursor-pointer" />
+            </a>
             <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              © 2022 REVOK. All rights reserved.
+              © 2022 Sehrish. All rights reserved.
             </p>
           </div>
-          <div>
+          <div className="pt-1">
             <h1
               className="tracking-[3px] font-semibold "
               style={{ fontFamily: "sans-serif" }}
@@ -58,18 +57,12 @@ export default function Footer() {
               Contact
             </h1>
             <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              Library Street Collective
-            </p>
-            <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              1260 Library St, Detroit, MI 48226
+              سحرش حسین
             </p>
           </div>
           <div className="pt-5">
             <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              T 313 600-7443
-            </p>
-            <p className="text-sm" style={{ fontFamily: "sans-serif" }}>
-              E info@lscgallery.com
+              sehrishhussainstudio@gmail.com
             </p>
           </div>
         </div>

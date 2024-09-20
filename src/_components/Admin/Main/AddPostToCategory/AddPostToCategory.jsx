@@ -11,6 +11,7 @@ import { app } from "../../../../../firebasedatabase/firebase";
 import { useEffect, useRef, useState } from "react";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { BsArrowClockwise } from "react-icons/bs";
+import { nanoid } from "nanoid";
 
 export default function AddPostToCategory() {
   const [file, setFile] = useState();
@@ -25,24 +26,21 @@ export default function AddPostToCategory() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!file || !category || !titleRef) {
-      alert("Fields are missing");
+    if (!file || !category) {
+      alert("Mandatory fields cannot be empty");
       return;
     }
     try {
       setLoader(true);
       const firestore = getFirestore(app);
-      const docRef1 = doc(firestore, "categories", categoryId);
 
+      const docRef1 = doc(firestore, "categories", categoryId);
       await updateDoc(docRef1, {
         postLength: increment(1),
       });
 
       const storage = getStorage(app);
-      const imgRef = ref(
-        storage,
-        `${category}Posts/${titleRef.current?.value}`
-      );
+      const imgRef = ref(storage, `${category}Posts/${nanoid()}`);
       await uploadBytes(imgRef, file);
       const imageURL = await getDownloadURL(imgRef);
 

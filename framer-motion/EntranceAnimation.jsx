@@ -11,14 +11,14 @@ export default function EntranceAnimation() {
       >
         <div className="overflow-hidden relative">
           <h1 className="text-center text-white text-5xl font-bold whitespace-nowrap">
-            JSON REVOK
+            Sehrish Hussain
           </h1>
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: "100%" }}
             transition={{ duration: 2.5 }}
-            style={{ width: 302, height: 48 }}
-            className="w-[302px] h-[48px] bg-black absolute top-0 left-0"
+            style={{ width: 350, height: 48 }}
+            className="w-[50px] h-[48px] bg-black absolute top-0 left-0"
           ></motion.div>
         </div>
       </motion.div>

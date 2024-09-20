@@ -10,40 +10,50 @@ export default function AddCategory() {
 
   const descriptionRef = useRef();
 
+  const craftWorkRef = useRef();
+
+  const canvasRef = useRef();
+
   const [file, setFile] = useState();
 
   const [loader, setLoader] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!file || !category || !titleRef.current?.value) {
-      alert("Fields are missing");
+    if (!categoryNameRef.current?.value || !file) {
+      alert("Mandatory fields cannot be empty");
       return;
     }
 
-    const title = titleRef.current.value; // Ensure title is set properly
+    if (!file.type.startsWith("image/")) {
+      alert("Please upload a valid image file (e.g., .jpg, .png, .gif).");
+      return;
+    }
 
     try {
       setLoader(true);
-      const firestore = getFirestore(app);
-      const docRef1 = doc(firestore, "categories", categoryId);
-      await updateDoc(docRef1, { postLength: increment(1) });
-
       const storage = getStorage(app);
-      const imgRef = ref(storage, `${category}Posts/${title}`);
+      const imgRef = ref(
+        storage,
+        `categories/${categoryNameRef.current?.value}`
+      );
       await uploadBytes(imgRef, file);
       const imageURL = await getDownloadURL(imgRef);
 
-      await addDoc(collection(firestore, `${category}`), {
-        title: title,
+      const firestore = getFirestore(app);
+      const docRef = await addDoc(collection(firestore, "categories"), {
+        name: categoryNameRef.current?.value,
+        craftWork: craftWorkRef.current?.value,
+        CanvasSize: canvasRef.current?.value,
+        description: descriptionRef.current?.value,
         image: imageURL,
+        postLength: 0,
+      }).then(() => {
+        alert("Category Created");
+        location.reload();
       });
-
-      alert(`Post added to ${category}`);
-      location.reload();
     } catch (error) {
-      console.error(error); // Log for debugging
-      alert(error.message || "An error occurred");
+      alert(error);
     } finally {
       setLoader(false);
     }
@@ -51,7 +61,7 @@ export default function AddCategory() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full h-full px-5">
+      <div className="flex flex-col items-center justify-center w-full h-full px-5 lg:py-10">
         <h1 className="text-xl font-medium mb-5">Add Category</h1>
         <form
           onSubmit={handleSubmit}
@@ -59,7 +69,7 @@ export default function AddCategory() {
         >
           <div className="flex flex-col w-full">
             <label htmlFor="categoryName" className="font-medium px-2">
-              Category Name
+              Category Name (Mandatory)
             </label>
             <input
               id="categoryName"
@@ -70,8 +80,32 @@ export default function AddCategory() {
             />
           </div>
           <div className="flex flex-col w-full">
+            <label htmlFor="craftWork" className="font-medium px-2">
+              Craft Work (Optional)
+            </label>
+            <input
+              id="craftWork"
+              ref={craftWorkRef}
+              type="text"
+              placeholder="Enter Craft Work"
+              className="border outline-none py-2 bg-white px-2 rounded-full w-full"
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            <label htmlFor="canvasSize" className="font-medium px-2">
+              Canvas Size (Optional)
+            </label>
+            <input
+              id="canvasSize"
+              ref={canvasRef}
+              type="text"
+              placeholder="Enter Canvas Size"
+              className="border outline-none py-2 bg-white px-2 rounded-full w-full"
+            />
+          </div>
+          <div className="flex flex-col w-full">
             <label htmlFor="categoryDesc" className="font-medium px-2">
-              Category Description
+              Category Description (Optional)
             </label>
             <textarea
               id="categoryDesc"
@@ -84,7 +118,7 @@ export default function AddCategory() {
           </div>
           <div>
             <label htmlFor="image" className="font-medium px-2">
-              Category Pic
+              Category Pic (Mandatory)
             </label>
             <input
               id="image"

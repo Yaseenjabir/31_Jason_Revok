@@ -28,8 +28,6 @@ export default function ReusableComp() {
     setCategoryData(data);
   }
 
-  console.log(categoryData);
-
   async function fetchCategoryPosts() {
     const firestore = getFirestore(app);
     const collectionRef = collection(firestore, category);
@@ -45,6 +43,8 @@ export default function ReusableComp() {
     fetchCategoryInfo();
     fetchCategoryPosts();
   }, [category]);
+
+  console.log(singleData);
 
   return (
     <>
@@ -62,6 +62,12 @@ export default function ReusableComp() {
           >
             {singleData?.name}
           </h1>
+          <p className="md:text-lg mb-2 lg:text-xl font-light sm:font-normal">
+            {singleData?.craftWork && singleData.craftWork}
+          </p>
+          <p className="mb-5 md:text-lg lg:text-xl font-light sm:font-normal">
+            {singleData?.CanvasSize && singleData.CanvasSize}
+          </p>
           <p className=" leading-7 md:text-lg lg:text-xl font-light sm:font-normal">
             {singleData?.description}
           </p>

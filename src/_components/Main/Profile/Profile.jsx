@@ -21,412 +21,275 @@ export default function Profile() {
             style={{ fontFamily: "Montserrat" }}
             className="text-[25px] text-center font-semibold sm:text-[30px] md:text-[36px] lg:text-[42px] xl:text-[48px] mb-10"
           >
-            JSON REVOK
+            Sehrish Hussain
           </h1>
           <p className="text-[18px] leading-7 font-light mb-6 md:text-[17px] lg:text-[20px] lg:font-normal lg:leading-9">
-            Entirely self-taught, Jason REVOK is known for pushing creative
-            boundaries that began in the street. Although his story begins with
-            graffiti, the artist has spent the last decade focusing on his
-            studio practice and the evolution of process and concept. Refusing
-            to be limited by his early recognition, REVOK allows only certain
-            elements from graffiti culture to transition to his contemporary
-            work—modest materials and industrial tools, ingenuity, his name—but
-            his proclivity towards minimalism and post-painterly abstraction has
-            become the driving force behind his practice. Examining the question
-            of authorship from start to finish, REVOK has developed systematic
-            yet imperfect tools to carry out his vision and has created a number
-            of unmistakable bodies of work. His bold, balanced, geometry is
-            heightened by the personal and imperfect sleight of the human hand.
+            Sehrish Hussain is a Pakistani-American who’s family grew up in
+            Metro-Detroit, where she currently works. Her practice investigates
+            notions of tradition, family narratives, and cultural hybridity. She
+            works primarily in relief prints on paper and fabric and her
+            proclivity towards pattern, color, and post-painterly abstraction
+            has become the driving force behind her practice. She is currently
+            pursuing an MFA in Print Media at Cranbrook Academy of Art and based
+            in Metro Detroit, dedicated to creating works that serve as both a
+            personal and cultural archive.
           </p>
-          <p className="text-[18px] leading-7 font-light mb-6 md:text-[17px] lg:text-[20px] ">
-            REVOK has exhibited in the Museum of Contemporary Art Los Angeles as
-            well as the Pasadena Museum of California Art; in galleries and
-            special projects in New York, Los Angeles, Detroit, and Dubai; and
-            is in important private collections worldwide.
-          </p>
-          <p className="font-semibold text-[18px] md:text-[20px] lg:text-[23px]">
-            Born in 1977, Riverside,
-          </p>
-          <p className="font-semibold text-[18px] md:text-[20px] lg:text-[23px]">
-            CA Lives and works in Detroit, MI.
-          </p>
-          <img
-            src="https://www.jasonrevok.com/wp-content/uploads/2021/05/05-JasonREVOK-780x624.jpg"
-            className="mt-10 w-full"
-            loading="lazy"
-          />
           <Accordion type="multiple" collapsible>
             <AccordionItem value="item-1" className="mt-10">
               <AccordionTrigger
                 style={{ fontFamily: "Montserrat" }}
-                className="text-[23px] font-semibold"
+                className="text-[18px] font-semibold"
               >
-                Selected Solo Exibition
+                Selected Solo/Group Exhibitions
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-10 py-10">
-                <div className="text-[22px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2022
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                <section className="flex flex-col gap-1">
+                  <h1 className="text-[22px] mb-5">Group Shows</h1>
+                  <div className="flex items-center  gap-1">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap"
                     >
-                      JASON REVOK: The Artist’s Instruments –
-                    </span>
-                    Museum of Contemporary Art Detroit | Detroit, M
-                  </p>
-                </div>
-                <div className="text-[22px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2021
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2024 Upcoming :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Café Liv, Ann Arbor, MI
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Stare into the Abyss –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
-                <div className="text-[22px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2020
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2024 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      On Seeing Red, Forum Gallery, Bloomfield Hills, MI|
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      All Things Must Pass –
-                    </span>
-                    g gallery | Seoul, Korea
-                  </p>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2024 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Space Between, Forum Gallery, Bloomfield Hills, MI{" "}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Descending –
-                    </span>
-                    Dio Horia | Mykonos, Greece
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2019
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2024 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Ramadan Bazaar, Muslim Community Association{" "}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      depersonalization-derealization –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2018
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2024 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Anexxx, Annex Gallery, Bloomfield Hills{" "}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Installation by Jason REVOK –
-                    </span>
-                    Arts Brookfield | Los Angeles, CA
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2016
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2023 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      DABF, Trinosophes, Detroit, MI{" "}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      SYSTEMS –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2019
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2023 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Nook, Forum Gallery, Bloomfield Hills, MI
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Systems Cont. –
-                    </span>
-                    Allouche Gallery | New York, NY
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2015
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2023 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Figment Fragment, BFA Senior Thesis Show, Ann Arbor, MI
+                    </p>
+                  </div>
+                </section>
+                <section className="flex flex-col gap-1">
+                  <h1 className="text-[22px] mb-5">Grants</h1>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] flex flex-col items-center justify-center font-semibold  pt-1"
                     >
-                      REVOK: Los Angeles –
-                    </span>
-                    Library Street Collective | Los Angeles, CA
-                  </p>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2023 2025
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      : Gilbert Fellowship, Fully-funded MFA Program at
+                      Cranbrook Academy of Art
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      REVOK –
-                    </span>
-                    Ruttkowski; 68 | Cologne, DE{" "}
-                  </p>
-                </div>
-
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2012
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2022 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Business + Impact Grant, $6,000
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      dOrdinary Things –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-1">
-              <AccordionTrigger
-                style={{ fontFamily: "Montserrat" }}
-                className="text-[23px] font-semibold"
-              >
-                Selected Group Exibition
-              </AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-10 py-10">
-                <div className="text-[22px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2023
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2022 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Stamps Internship Grant, $1,500
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Beyond the Streets London
-                    </span>
-                    Curated by Roger Gastman – Saatchi Gallery | London, UK
-                  </p>
-                </div>
-                <div className="text-[22px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2022
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2022 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      The Arts at Michigan Student Mini Grant, $500
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      It Takes a Village –
-                    </span>
-                    Library Street Collective | Miami Beach, FL
-                  </p>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2021 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Business + Impact Grant, $2,000
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Island Time,
-                    </span>
-                    Curated by Andrew Schoultz – Volery Gallery | Dubai, UAE
-                  </p>
-                </div>
-                <div className="text-[22px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2021
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2021 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Undergraduate Student Research Grant, $2000
+                    </p>
+                  </div>
+                </section>
+                <section className="flex flex-col gap-3">
+                  <h1 className="text-[22px] mb-5">Workshops</h1>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      More is More –
-                    </span>
-                    Akron Museum of Art | Akron, OH
-                  </p>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2024 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Laser-cut woodcut prints: Blending historical craft with
+                      new technologies Teaching
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold pt-1"
                     >
-                      Adolesence –
-                    </span>
-                    Studio Chromie | Taranto, Italy
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2019
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2022 2023
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7">
+                      : Public Tour Lead, University of Michigan Museum of Art,
+                      Ann Arbor, MI
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      depersonalization-derealization –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2018
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2022 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Art Camp Instructor, Studio Gallery DC, Washington, DC
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      Installation by Jason REVOK –
-                    </span>
-                    Arts Brookfield | Los Angeles, CA
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2016
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2021 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7">
+                      Art Camp Instructor, Charles H. Wright Museum of African
+                      American History and Culture, Detroit, MI
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold pt-1 text-nowrap"
                     >
-                      SYSTEMS –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2019
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2020 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Diversity Peer Educator, University of Michigan, Ann
+                      Arbor, MI
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold pt-1 text-nowrap"
                     >
-                      Systems Cont. –
-                    </span>
-                    Allouche Gallery | New York, NY
-                  </p>
-                </div>
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2015
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
+                      2019 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7 px-2">
+                      Facilitator, Umich Central Student Government, Ann Arbor,
+                      MI
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <h1
                       style={{ fontFamily: "Montserrat" }}
+                      className="text-[17px] font-semibold text-nowrap pt-1"
                     >
-                      REVOK: Los Angeles –
-                    </span>
-                    Library Street Collective | Los Angeles, CA
-                  </p>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
-                      style={{ fontFamily: "Montserrat" }}
-                    >
-                      REVOK –
-                    </span>
-                    Ruttkowski; 68 | Cologne, DE{" "}
-                  </p>
-                </div>
-
-                <div className="text-[14px]">
-                  <h1
-                    style={{ fontFamily: "Montserrat" }}
-                    className="text-[17px] font-semibold"
-                  >
-                    2012
-                  </h1>
-                  <p className="mt-2 tracking-wider leading-7">
-                    <span
-                      className="font-bold"
-                      style={{ fontFamily: "Montserrat" }}
-                    >
-                      dOrdinary Things –
-                    </span>
-                    Library Street Collective | Detroit, MI
-                  </p>
-                </div>
+                      2019 :
+                    </h1>
+                    <p className="tracking-wider text-lg leading-7">
+                      Part-time teacher, Islamic Association of Greater Detroit,
+                      Rochester Hills, MI
+                    </p>
+                  </div>
+                </section>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

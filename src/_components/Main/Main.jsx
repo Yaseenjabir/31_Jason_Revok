@@ -109,7 +109,7 @@ export default function MainComp() {
 
       {showAnimateOnRender && <AnimateOnRender />}
 
-      <main className="w-full px-5 mt-[65px]">
+      <main className="w-full px-5 mt-[85px]">
         <div className="flex flex-col gap-20">
           {categoryData.map((item, index) => {
             return (

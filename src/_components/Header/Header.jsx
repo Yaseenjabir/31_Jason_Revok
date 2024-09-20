@@ -109,7 +109,7 @@ export default function Header() {
       <div
         className={`w-full bg-white fixed flex ${visibility} flex-col items-center justify-center left-0 transition-all ease-in-out duration-1000 ${top} z-50  h-[100vh]`}
       >
-        <ul className="text-center flex flex-col items-center justify-center">
+        <ul className="text-center flex flex-col items-center justify-center px-5">
           {boldNavLin.map((item, index) => {
             return (
               <>
@@ -123,7 +123,7 @@ export default function Header() {
                   onMouseEnter={() => setBoldAnimateIndex(index)}
                   onMouseLeave={() => setBoldAnimateIndex(null)}
                   style={{ fontFamily: "Montserrat", fontWeight: 600 }}
-                  className="text-2xl mb-2 max-w-min text-nowrap cursor-pointer"
+                  className="text-2xl mb-2 max-w-min cursor-pointer"
                 >
                   {item.name}
                   <div
@@ -145,7 +145,7 @@ export default function Header() {
                   key={index}
                   onMouseLeave={() => setAnimateIndex(null)}
                   onMouseEnter={() => setAnimateIndex(index)}
-                  className="text-xl font-light my-1 cursor-pointer max-w-min text-nowrap"
+                  className="text-xl font-light my-1 cursor-pointer "
                 >
                   {item.name}
                   <div
